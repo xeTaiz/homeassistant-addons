@@ -1,7 +1,7 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-LABEL io.hass.version="1.0" io.hass.type="addon" io.hass.arch="aarch64|amd64"
+LABEL io.hass.version="1.0" io.hass.type="addon" io.hass.arch="aarch64|amd64|armv7|armhf"
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -10,6 +10,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         sudo \
         locales \
+        brlaser \
         cups \
         avahi-daemon \
         libnss-mdns \
