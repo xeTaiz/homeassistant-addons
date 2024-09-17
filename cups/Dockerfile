@@ -10,7 +10,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         sudo \
         locales \
-        brlaser \
+        printer-driver-brlaser \
         cups \
         avahi-daemon \
         libnss-mdns \
